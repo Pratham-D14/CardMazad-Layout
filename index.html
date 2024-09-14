@@ -1,0 +1,1730 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CardMazad</title>
+
+    <!--Plugin CSS file with desired skin-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"
+    />
+
+    <!-- adding Fonts -->
+    <link href="./assets/fonts/Poppins/Poppins-Bold.ttf" />
+
+    <!-- Adding Style.css -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <section class="header">
+      <div class="container">
+        <!-- Navbar -->
+        <div class="nav">
+          <img
+            src="./assets/images/header-images/header-logo.png"
+            alt=""
+            class="header-logo"
+          />
+          <div class="nav__menu">
+            <ul>
+              <li class="nav-li">VEHICLES</li>
+              <li class="nav-li">faqs</li>
+              <li class="nav-li">CONTACT US</li>
+              <li class="nav-li">
+                <img
+                  src="./assets/images/header-images/united-arab-emirates.png"
+                  alt=""
+                />
+              </li>
+
+              <li class="nav-li">
+                <div class="nav-li li-button">
+                  <img src="./assets/images/header-images/user.png" alt="" />
+                  <p>Sing In</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="nav-li li-button nav__singin unactive">
+            <img src="./assets/images/header-images/user.png" alt="" />
+          </div>
+        </div>
+
+        <!-- Grid Container -->
+        <div class="grid__container">
+          <div class="grid__search">
+            <img
+              src="./assets/images/header-images/magnifying-glass-solid.svg"
+              alt="search-logo"
+              class="grid-search-logo"
+            />
+            <input type="search" placeholder="Toyota Camry 2020" />
+            <select class="grid__bytime">
+              <option>By Time</option>
+            </select>
+          </div>
+
+          <div class="grid__list">
+            <img src="./assets/images/header-images/square-solid.svg" alt="" />
+            <img
+              src="./assets/images/header-images/list-solid.svg"
+              alt=""
+              class="list-image"
+            />
+          </div>
+
+          <!-- Damage DropDown -->
+          <div class="grid__damage__dropdown">
+            <select class="damage-dropdown">
+              <option>Damage Type</option>
+            </select>
+          </div>
+
+          <!-- Favorites -->
+          <div class="grid__favorites">
+            <img
+              src="./assets/images/header-images/star.png"
+              alt="favorite-star-image"
+            />
+            <label>Show Favorites</label>
+          </div>
+
+          <!-- Checkbox -->
+          <div class="grid__checkbox">
+            <div class="checkbox-div">
+              <input type="checkbox" name="check" />
+              <label>Live Auction</label>
+            </div>
+
+            <div class="checkbox-div">
+              <input type="checkbox" name="check" />
+              <label>Coming Soon</label>
+            </div>
+
+            <div class="checkbox-div">
+              <input type="checkbox" name="check" />
+              <label>Ended Auctions</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Container End -->
+      </div>
+      <!-- Section End -->
+    </section>
+
+    <!-- -------- Section 2 => Main Content --------- -->
+    <section class="content">
+      <div class="container flex pt-24 pb-100">
+        <!-- Form -->
+        <div class="form">
+          <select class="form__select-make">
+            <option>Make</option>
+          </select>
+          <select class="form__select-make">
+            <option>Model</option>
+          </select>
+          <select class="form__select-make">
+            <option>City</option>
+          </select>
+          <select class="from__to">
+            <option>From</option>
+          </select>
+          <select class="from__to tooo">
+            <option>To</option>
+          </select>
+          <input
+            type="text"
+            class="form__select-make"
+            placeholder="Auction ID"
+          />
+
+          <!-- Range Slider  -->
+          <div class="range-slider">
+            <label for="option-bid">Current Bid</label>
+            <input
+              class="js-range-slider"
+              id="option-bid"
+              name="my_range"
+              value=""
+            />
+          </div>
+
+          <button class="search__button">
+            <!-- <img src="./assets/images/header-images/magnifying-glass-solid.svg" alt=""> -->
+            Search
+          </button>
+
+          <p class="form__reset__button">Reset</p>
+          <!-- Form End -->
+        </div>
+
+        <!-- Car Cards -->
+        <div class="card__page_wrapper">
+          <div class="card__content">
+            <!-- Column 1 -->
+            <div class="cards__column">
+              <!-- card 1 -->
+              <div class="cards__card">
+                <!-- ---------- Card Date ---------- -->
+                <p class="cards__date">Thursday 12 Dec 2019 - 15:10</p>
+
+                <!-- ------Car Image -----------  -->
+                <div class="car-image">
+                  <!-- ------- Inside Car Image -------- -->
+                  <div class="car__star_image" onclick="toggleStar()">
+                    <img
+                      src="./assets/images/content-images/fill-star.png"
+                      alt="filled-star"
+                      class="star-img"
+                    />
+                  </div>
+
+                  <div class="car__law__image">
+                    <img
+                      src="./assets/images/content-images/law.svg"
+                      alt="law-symbol"
+                    />
+                  </div>
+                  <!-- <div class="car__star_image"></div> -->
+                </div>
+
+                <!-- ------ Model Name & Year --------- -->
+                <div class="car__model flex space-between">
+                  <p>Toyota Camry SE</p>
+                  <p>2019</p>
+                </div>
+
+                <!-- ------- Accident & Views -------- -->
+                <div class="car__accident flex space-between">
+                  <div class="car__accident-img flex">
+                    <img
+                      src="./assets/images/content-images/overturned-vehicle.svg"
+                      alt="overturned-vehicle"
+                    />
+                    <p>Accident</p>
+                  </div>
+                  <div class="car__accident-views flex">
+                    <img
+                      src="./assets/images/content-images/visible.svg"
+                      alt="eye-image"
+                    />
+                    <p>7732 Views</p>
+                  </div>
+                </div>
+
+                <!-- --------- Location --------- -->
+                <div class="card__location flex">
+                  <img
+                    src="./assets/images/content-images/location.svg"
+                    alt="location image"
+                  />
+
+                  <div class="location__name">
+                    <span>Location</span>
+                    <p>Riyadh Yard, Saudi Arabia</p>
+                  </div>
+
+                  <!-- Location end -->
+                </div>
+
+                <!-- --- buy&sold ------- -->
+                <div class="card__buy-sold flex">
+                  <!-- Sold For -->
+                  <div class="card__sold flex">
+                    <img
+                      src="./assets/images/content-images/law.svg"
+                      alt="law-symbol"
+                    />
+                    <div class="sold-for">
+                      <span>Sold For</span>
+                      <p class="card__sold-amount">23,911<span>SAR</span></p>
+                    </div>
+                  </div>
+
+                  <!-- Buy Now -->
+                  <div class="car__buy flex">
+                    <img
+                      src="./assets/images/content-images/money.svg"
+                      alt="money-image"
+                    />
+                    <div class="buy-now">
+                      <span>Sold For</span>
+                      <p class="car__buy_now-amount">23,911<span>SAR</span></p>
+                    </div>
+                  </div>
+
+                  <!-- buy&sold end  -->
+                </div>
+
+                <!-- ----- View More Button --------- -->
+                <div class="card__button flex">
+                  <p>View 3 Bids</p>
+                  <img
+                    src="./assets/images/content-images/chevron-down-solid.svg"
+                    class="chevron-img-white active"
+                    alt=""
+                  />
+                  <img
+                    src="./assets/images/content-images/chevron-down-solid-green.svg"
+                    class="chevron-img-green unactive"
+                    alt=""
+                  />
+                </div>
+
+                <!-- View More Bid Div -->
+                <div class="card__expand unactive">
+                  <div class="card__view__more">
+                    <div class="card__view__more-date flex">
+                      <img
+                        src="./assets/images/content-images/calendar.svg"
+                        alt="calendar-image"
+                      />
+                      <p>10 Dec 2019 - 20:05</p>
+                    </div>
+                    <div
+                      class="card__view__more-name-amount flex space-between"
+                    >
+                      <p>1. &nbsp;&nbsp; JOVANA MILIC</p>
+                      <p class="view_more-p">10,500<span>SAR</span></p>
+                    </div>
+                  </div>
+
+                  <div class="exapnad_area-line"></div>
+
+                  <div class="card__view__more">
+                    <div class="card__view__more-date flex">
+                      <img
+                        src="./assets/images/content-images/calendar.svg"
+                        alt="calendar-image"
+                      />
+                      <p>10 Dec 2019 - 20:05</p>
+                    </div>
+                    <div
+                      class="card__view__more-name-amount flex space-between"
+                    >
+                      <p>1. &nbsp;&nbsp; JOVANA MILIC</p>
+                      <p class="view_more-p">10,500<span>SAR</span></p>
+                    </div>
+                  </div>
+
+                  <div class="exapnad_area-line"></div>
+
+                  <div class="card__view__more">
+                    <div class="card__view__more-date flex">
+                      <img
+                        src="./assets/images/content-images/calendar.svg"
+                        alt="calendar-image"
+                      />
+                      <p>10 Dec 2019 - 20:05</p>
+                    </div>
+                    <div
+                      class="card__view__more-name-amount flex space-between"
+                    >
+                      <p>1. &nbsp;&nbsp; JOVANA MILIC</p>
+                      <p class="view_more-p">10,500<span>SAR</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="cards__card mt-20">
+                <!-- ---------- Card Date ---------- -->
+                <p class="cards__date">Thursday 12 Dec 2019 - 15:10</p>
+
+                <!-- ------Car Image -----------  -->
+                <div class="car-image">
+                  <!-- ------- Inside Car Image -------- -->
+                  <div class="car__star_image" onclick="toggleStar()">
+                    <img
+                      src="./assets/images/content-images/fill-star.png"
+                      alt="filled-star"
+                      class="star-img"
+                    />
+                  </div>
+                  <div class="car__law__image">
+                    <img
+                      src="./assets/images/content-images/law.svg"
+                      alt="law-symbol"
+                    />
+                  </div>
+                </div>
+
+                <!-- ------ Model Name & Year --------- -->
+                <div class="car__model flex space-between">
+                  <p>Toyota Camry SE</p>
+                  <p>2019</p>
+                </div>
+
+                <!-- ------- Accident & Views -------- -->
+                <div class="car__accident flex space-between">
+                  <div class="car__accident-img flex">
+                    <img
+                      src="./assets/images/content-images/overturned-vehicle.svg"
+                      alt="overturned-vehicle"
+                    />
+                    <p>Accident</p>
+                  </div>
+                  <div class="car__accident-views flex">
+                    <img
+                      src="./assets/images/content-images/visible.svg"
+                      alt="eye-image"
+                    />
+                    <p>7732 Views</p>
+                  </div>
+                </div>
+
+                <!-- --------- Location --------- -->
+                <div class="card__location flex">
+                  <img
+                    src="./assets/images/content-images/location.svg"
+                    alt="location image"
+                  />
+
+                  <div class="location__name">
+                    <span>Location</span>
+                    <p>Riyadh Yard, Saudi Arabia</p>
+                  </div>
+
+                  <!-- Location end -->
+                </div>
+
+                <!-- --- buy&sold ------- -->
+                <div class="card__buy-sold flex">
+                  <!-- Sold For -->
+                  <div class="card__sold flex">
+                    <img
+                      src="./assets/images/content-images/law.svg"
+                      alt="law-symbol"
+                    />
+                    <div class="sold-for">
+                      <span>Sold For</span>
+                      <p class="card__sold-amount">23,911<span>SAR</span></p>
+                    </div>
+                  </div>
+
+                  <!-- Buy Now -->
+                  <div class="car__buy flex">
+                    <img
+                      src="./assets/images/content-images/money.svg"
+                      alt="money-image"
+                    />
+                    <div class="buy-now">
+                      <span>Sold For</span>
+                      <p class="car__buy_now-amount">23,911<span>SAR</span></p>
+                    </div>
+                  </div>
+
+                  <!-- buy&sold end  -->
+                </div>
+
+                <!-- ----- View More Button --------- -->
+                <div class="card__button flex">
+                  <p>View 3 Bids</p>
+                  <img
+                    src="./assets/images/content-images/chevron-down-solid.svg"
+                    alt=""
+                  />
+                  <img
+                    src="./assets/images/content-images/chevron-down-solid-green.svg"
+                    class="chevron-img-green unactive"
+                    alt=""
+                  />
+                </div>
+
+                <!-- View More Bid Div -->
+                <div class="card__expand unactive">
+                  <div class="card__view__more">
+                    <div class="card__view__more-date flex">
+                      <img
+                        src="./assets/images/content-images/calendar.svg"
+                        alt="calendar-image"
+                      />
+                      <p>10 Dec 2019 - 20:05</p>
+                    </div>
+                    <div
+                      class="card__view__more-name-amount flex space-between"
+                    >
+                      <p>1. &nbsp;&nbsp; JOVANA MILIC</p>
+                      <p class="view_more-p">10,500<span>SAR</span></p>
+                    </div>
+                  </div>
+
+                  <div class="exapnad_area-line"></div>
+
+                  <div class="card__view__more">
+                    <div class="card__view__more-date flex">
+                      <img
+                        src="./assets/images/content-images/calendar.svg"
+                        alt="calendar-image"
+                      />
+                      <p>10 Dec 2019 - 20:05</p>
+                    </div>
+                    <div
+                      class="card__view__more-name-amount flex space-between"
+                    >
+                      <p>1. &nbsp;&nbsp; JOVANA MILIC</p>
+                      <p class="view_more-p">10,500<span>SAR</span></p>
+                    </div>
+                  </div>
+
+                  <div class="exapnad_area-line"></div>
+
+                  <div class="card__view__more">
+                    <div class="card__view__more-date flex">
+                      <img
+                        src="./assets/images/content-images/calendar.svg"
+                        alt="calendar-image"
+                      />
+                      <p>10 Dec 2019 - 20:05</p>
+                    </div>
+                    <div
+                      class="card__view__more-name-amount flex space-between"
+                    >
+                      <p>1. &nbsp;&nbsp; JOVANA MILIC</p>
+                      <p class="view_more-p">10,500<span>SAR</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- card 3 -->
+              <div class="cards__card mt-20">
+                <!-- ---------- Card Date ---------- -->
+                <p class="cards__date">Thursday 12 Dec 2019 - 15:10</p>
+
+                <!-- ------Car Image -----------  -->
+                <div class="car-image">
+                  <!-- ------- Inside Car Image -------- -->
+                  <div class="car__star_image" onclick="toggleStar()">
+                    <img
+                      src="./assets/images/content-images/fill-star.png"
+                      alt="filled-star"
+                      class="star-img"
+                    />
+                  </div>
+
+                  <div class="car__law__image">
+                    <img
+                      src="./assets/images/content-images/law.svg"
+                      alt="law-symbol"
+                    />
+                  </div>
+                </div>
+
+                <!-- ------ Model Name & Year --------- -->
+                <div class="car__model flex space-between">
+                  <p>Toyota Camry SE</p>
+                  <p>2019</p>
+                </div>
+
+                <!-- ------- Accident & Views -------- -->
+                <div class="car__accident flex space-between">
+                  <div class="car__accident-img flex">
+                    <img
+                      src="./assets/images/content-images/overturned-vehicle.svg"
+                      alt="overturned-vehicle"
+                    />
+                    <p>Accident</p>
+                  </div>
+                  <div class="car__accident-views flex">
+                    <img
+                      src="./assets/images/content-images/visible.svg"
+                      alt="eye-image"
+                    />
+                    <p>7732 Views</p>
+                  </div>
+                </div>
+
+                <!-- --------- Location --------- -->
+                <div class="card__location flex">
+                  <img
+                    src="./assets/images/content-images/location.svg"
+                    alt="location image"
+                  />
+
+                  <div class="location__name">
+                    <span>Location</span>
+                    <p>Riyadh Yard, Saudi Arabia</p>
+                  </div>
+
+                  <!-- Location end -->
+                </div>
+
+                <!-- --- buy&sold ------- -->
+                <div class="card__buy-sold flex">
+                  <!-- Sold For -->
+                  <div class="card__sold flex">
+                    <img
+                      src="./assets/images/content-images/law.svg"
+                      alt="law-symbol"
+                    />
+                    <div class="sold-for">
+                      <span>Sold For</span>
+                      <p class="card__sold-amount">23,911<span>SAR</span></p>
+                    </div>
+                  </div>
+
+                  <!-- Buy Now -->
+                  <div class="car__buy flex">
+                    <img
+                      src="./assets/images/content-images/money.svg"
+                      alt="money-image"
+                    />
+                    <div class="buy-now">
+                      <span>Sold For</span>
+                      <p class="car__buy_now-amount">23,911<span>SAR</span></p>
+                    </div>
+                  </div>
+
+                  <!-- buy&sold end  -->
+                </div>
+
+                <!-- ----- View More Button --------- -->
+                <div class="card__button flex">
+                  <p>View 3 Bids</p>
+                  <img
+                    src="./assets/images/content-images/chevron-down-solid.svg"
+                    alt=""
+                  />
+                  <img
+                    src="./assets/images/content-images/chevron-down-solid-green.svg"
+                    class="chevron-img-green unactive"
+                    alt=""
+                  />
+                </div>
+
+                <!-- View More Bid Div -->
+                <div class="card__expand unactive">
+                  <div class="card__view__more">
+                    <div class="card__view__more-date flex">
+                      <img
+                        src="./assets/images/content-images/calendar.svg"
+                        alt="calendar-image"
+                      />
+                      <p>10 Dec 2019 - 20:05</p>
+                    </div>
+                    <div
+                      class="card__view__more-name-amount flex space-between"
+                    >
+                      <p>1. &nbsp;&nbsp; JOVANA MILIC</p>
+                      <p class="view_more-p">10,500<span>SAR</span></p>
+                    </div>
+                  </div>
+
+                  <div class="exapnad_area-line"></div>
+
+                  <div class="card__view__more">
+                    <div class="card__view__more-date flex">
+                      <img
+                        src="./assets/images/content-images/calendar.svg"
+                        alt="calendar-image"
+                      />
+                      <p>10 Dec 2019 - 20:05</p>
+                    </div>
+                    <div
+                      class="card__view__more-name-amount flex space-between"
+                    >
+                      <p>1. &nbsp;&nbsp; JOVANA MILIC</p>
+                      <p class="view_more-p">10,500<span>SAR</span></p>
+                    </div>
+                  </div>
+
+                  <div class="exapnad_area-line"></div>
+
+                  <div class="card__view__more">
+                    <div class="card__view__more-date flex">
+                      <img
+                        src="./assets/images/content-images/calendar.svg"
+                        alt="calendar-image"
+                      />
+                      <p>10 Dec 2019 - 20:05</p>
+                    </div>
+                    <div
+                      class="card__view__more-name-amount flex space-between"
+                    >
+                      <p>1. &nbsp;&nbsp; JOVANA MILIC</p>
+                      <p class="view_more-p">10,500<span>SAR</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="cards__column">
+              <!-- card 1 -->
+              <div class="cards__card mobile-mt-20">
+                <!-- ---------- Card Date ---------- -->
+                <p class="cards__date">Thursday 12 Dec 2019 - 15:10</p>
+
+                <!-- ------Car Image -----------  -->
+                <div class="car-image">
+                  <!-- ------- Inside Car Image -------- -->
+                  <div class="car__star_image" onclick="toggleStar()">
+                    <img
+                      src="./assets/images/content-images/star.png"
+                      alt="unfill-star"
+                      class="star-img"
+                    />
+                  </div>
+
+                  <div class="car__law__image">
+                    <img
+                      src="./assets/images/content-images/law.svg"
+                      alt="law-symbol"
+                    />
+                  </div>
+                </div>
+
+                <!-- ------ Model Name & Year --------- -->
+                <div class="car__model flex space-between">
+                  <p>Toyota Camry XSE</p>
+                  <p>2019</p>
+                </div>
+
+                <!-- ------- Accident & Views -------- -->
+                <div class="car__accident flex space-between">
+                  <div class="car__accident-img flex">
+                    <img
+                      src="./assets/images/content-images/overturned-vehicle.svg"
+                      alt="overturned-vehicle"
+                    />
+                    <p>Accident</p>
+                  </div>
+                  <div class="car__accident-views flex">
+                    <img
+                      src="./assets/images/content-images/visible.svg"
+                      alt="eye-image"
+                    />
+                    <p>7732 Views</p>
+                  </div>
+                </div>
+
+                <!-- --------- Location --------- -->
+                <div class="card__location flex">
+                  <img
+                    src="./assets/images/content-images/location.svg"
+                    alt="location image"
+                  />
+
+                  <div class="location__name">
+                    <span>Location</span>
+                    <p>Riyadh Yard, Saudi Arabia</p>
+                  </div>
+
+                  <!-- Location end -->
+                </div>
+
+                <!-- --- buy&sold ------- -->
+                <div class="card__buy-sold flex">
+                  <!-- Sold For -->
+                  <div class="card__sold flex">
+                    <img
+                      src="./assets/images/content-images/law.svg"
+                      alt="law-symbol"
+                    />
+                    <div class="sold-for">
+                      <span>Sold For</span>
+                      <p class="card__sold-amount">23,911<span>SAR</span></p>
+                    </div>
+                  </div>
+
+                  <!-- Buy Now -->
+                  <div class="car__buy flex">
+                    <img
+                      src="./assets/images/content-images/money.svg"
+                      alt="money-image"
+                    />
+                    <div class="buy-now">
+                      <span>Sold For</span>
+                      <p class="car__buy_now-amount">23,911<span>SAR</span></p>
+                    </div>
+                  </div>
+
+                  <!-- buy&sold end  -->
+                </div>
+
+                <!-- ----- View More Button --------- -->
+                <div class="card__button flex">
+                  <p>View 3 Bids</p>
+                  <img
+                    src="./assets/images/content-images/chevron-down-solid.svg"
+                    alt=""
+                  />
+                  <img
+                    src="./assets/images/content-images/chevron-down-solid-green.svg"
+                    class="chevron-img-green unactive"
+                    alt=""
+                  />
+                </div>
+
+                <!-- View More Bid Div -->
+                <div class="card__expand unactive">
+                  <div class="card__view__more">
+                    <div class="card__view__more-date flex">
+                      <img
+                        src="./assets/images/content-images/calendar.svg"
+                        alt="calendar-image"
+                      />
+                      <p>10 Dec 2019 - 20:05</p>
+                    </div>
+                    <div
+                      class="card__view__more-name-amount flex space-between"
+                    >
+                      <p>1. &nbsp;&nbsp; JOVANA MILIC</p>
+                      <p class="view_more-p">10,500<span>SAR</span></p>
+                    </div>
+                  </div>
+
+                  <div class="exapnad_area-line"></div>
+
+                  <div class="card__view__more">
+                    <div class="card__view__more-date flex">
+                      <img
+                        src="./assets/images/content-images/calendar.svg"
+                        alt="calendar-image"
+                      />
+                      <p>10 Dec 2019 - 20:05</p>
+                    </div>
+                    <div
+                      class="card__view__more-name-amount flex space-between"
+                    >
+                      <p>1. &nbsp;&nbsp; JOVANA MILIC</p>
+                      <p class="view_more-p">10,500<span>SAR</span></p>
+                    </div>
+                  </div>
+
+                  <div class="exapnad_area-line"></div>
+
+                  <div class="card__view__more">
+                    <div class="card__view__more-date flex">
+                      <img
+                        src="./assets/images/content-images/calendar.svg"
+                        alt="calendar-image"
+                      />
+                      <p>10 Dec 2019 - 20:05</p>
+                    </div>
+                    <div
+                      class="card__view__more-name-amount flex space-between"
+                    >
+                      <p>1. &nbsp;&nbsp; JOVANA MILIC</p>
+                      <p class="view_more-p">10,500<span>SAR</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="cards__card mt-20">
+                <!-- ---------- Card Date ---------- -->
+                <p class="cards__date">Thursday 12 Dec 2019 - 15:10</p>
+
+                <!-- ------Car Image -----------  -->
+                <div class="car-image">
+                  <!-- ------- Inside Car Image -------- -->
+                  <div class="car__star_image" onclick="toggleStar()">
+                    <img
+                      src="./assets/images/content-images/star.png"
+                      alt="unfill-star"
+                      class="star-img"
+                    />
+                  </div>
+
+                  <div class="car__star_image"></div>
+                  <div class="car__law__image">
+                    <img
+                      src="./assets/images/content-images/law.svg"
+                      alt="law-symbol"
+                    />
+                  </div>
+                </div>
+
+                <!-- ------ Model Name & Year --------- -->
+                <div class="car__model flex space-between">
+                  <p>Toyota Camry SE</p>
+                  <p>2019</p>
+                </div>
+
+                <!-- ------- Accident & Views -------- -->
+                <div class="car__accident flex space-between">
+                  <div class="car__accident-img flex">
+                    <img
+                      src="./assets/images/content-images/overturned-vehicle.svg"
+                      alt="overturned-vehicle"
+                    />
+                    <p>Accident</p>
+                  </div>
+                  <div class="car__accident-views flex">
+                    <img
+                      src="./assets/images/content-images/visible.svg"
+                      alt="eye-image"
+                    />
+                    <p>7732 Views</p>
+                  </div>
+                </div>
+
+                <!-- --------- Location --------- -->
+                <div class="card__location flex">
+                  <img
+                    src="./assets/images/content-images/location.svg"
+                    alt="location image"
+                  />
+
+                  <div class="location__name">
+                    <span>Location</span>
+                    <p>Riyadh Yard, Saudi Arabia</p>
+                  </div>
+
+                  <!-- Location end -->
+                </div>
+
+                <!-- --- buy&sold ------- -->
+                <div class="card__buy-sold flex">
+                  <!-- Sold For -->
+                  <div class="card__sold flex">
+                    <img
+                      src="./assets/images/content-images/law.svg"
+                      alt="law-symbol"
+                    />
+                    <div class="sold-for">
+                      <span>Sold For</span>
+                      <p class="card__sold-amount">23,911<span>SAR</span></p>
+                    </div>
+                  </div>
+
+                  <!-- Buy Now -->
+                  <div class="car__buy flex">
+                    <img
+                      src="./assets/images/content-images/money.svg"
+                      alt="money-image"
+                    />
+                    <div class="buy-now">
+                      <span>Sold For</span>
+                      <p class="car__buy_now-amount">23,911<span>SAR</span></p>
+                    </div>
+                  </div>
+
+                  <!-- buy&sold end  -->
+                </div>
+
+                <!-- ----- View More Button --------- -->
+                <div class="card__button flex">
+                  <p>View 3 Bids</p>
+                  <img
+                    src="./assets/images/content-images/chevron-down-solid.svg"
+                    alt=""
+                  />
+                  <img
+                    src="./assets/images/content-images/chevron-down-solid-green.svg"
+                    class="chevron-img-green unactive"
+                    alt=""
+                  />
+                </div>
+
+                <!-- View More Bid Div -->
+                <div class="card__expand unactive">
+                  <div class="card__view__more">
+                    <div class="card__view__more-date flex">
+                      <img
+                        src="./assets/images/content-images/calendar.svg"
+                        alt="calendar-image"
+                      />
+                      <p>10 Dec 2019 - 20:05</p>
+                    </div>
+                    <div
+                      class="card__view__more-name-amount flex space-between"
+                    >
+                      <p>1. &nbsp;&nbsp; JOVANA MILIC</p>
+                      <p class="view_more-p">10,500<span>SAR</span></p>
+                    </div>
+                  </div>
+
+                  <div class="exapnad_area-line"></div>
+
+                  <div class="card__view__more">
+                    <div class="card__view__more-date flex">
+                      <img
+                        src="./assets/images/content-images/calendar.svg"
+                        alt="calendar-image"
+                      />
+                      <p>10 Dec 2019 - 20:05</p>
+                    </div>
+                    <div
+                      class="card__view__more-name-amount flex space-between"
+                    >
+                      <p>1. &nbsp;&nbsp; JOVANA MILIC</p>
+                      <p class="view_more-p">10,500<span>SAR</span></p>
+                    </div>
+                  </div>
+
+                  <div class="exapnad_area-line"></div>
+
+                  <div class="card__view__more">
+                    <div class="card__view__more-date flex">
+                      <img
+                        src="./assets/images/content-images/calendar.svg"
+                        alt="calendar-image"
+                      />
+                      <p>10 Dec 2019 - 20:05</p>
+                    </div>
+                    <div
+                      class="card__view__more-name-amount flex space-between"
+                    >
+                      <p>1. &nbsp;&nbsp; JOVANA MILIC</p>
+                      <p class="view_more-p">10,500<span>SAR</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- card 3 -->
+              <div class="cards__card mt-20">
+                <!-- ---------- Card Date ---------- -->
+                <p class="cards__date">Thursday 12 Dec 2019 - 15:10</p>
+
+                <!-- ------Car Image -----------  -->
+                <div class="car-image">
+                  <!-- ------- Inside Car Image -------- -->
+                  <div class="car__star_image" onclick="toggleStar()">
+                    <img
+                      src="./assets/images/content-images/star.png"
+                      alt="unfill-star"
+                      class="star-img"
+                    />
+                  </div>
+
+                  <div class="car__law__image">
+                    <img
+                      src="./assets/images/content-images/law.svg"
+                      alt="law-symbol"
+                    />
+                  </div>
+                </div>
+
+                <!-- ------ Model Name & Year --------- -->
+                <div class="car__model flex space-between">
+                  <p>Toyota Camry SE</p>
+                  <p>2019</p>
+                </div>
+
+                <!-- ------- Accident & Views -------- -->
+                <div class="car__accident flex space-between">
+                  <div class="car__accident-img flex">
+                    <img
+                      src="./assets/images/content-images/overturned-vehicle.svg"
+                      alt="overturned-vehicle"
+                    />
+                    <p>Accident</p>
+                  </div>
+                  <div class="car__accident-views flex">
+                    <img
+                      src="./assets/images/content-images/visible.svg"
+                      alt="eye-image"
+                    />
+                    <p>7732 Views</p>
+                  </div>
+                </div>
+
+                <!-- --------- Location --------- -->
+                <div class="card__location flex">
+                  <img
+                    src="./assets/images/content-images/location.svg"
+                    alt="location image"
+                  />
+
+                  <div class="location__name">
+                    <span>Location</span>
+                    <p>Riyadh Yard, Saudi Arabia</p>
+                  </div>
+
+                  <!-- Location end -->
+                </div>
+
+                <!-- --- buy&sold ------- -->
+                <div class="card__buy-sold flex">
+                  <!-- Sold For -->
+                  <div class="card__sold flex">
+                    <img
+                      src="./assets/images/content-images/law.svg"
+                      alt="law-symbol"
+                    />
+                    <div class="sold-for">
+                      <span>Sold For</span>
+                      <p class="card__sold-amount">23,911<span>SAR</span></p>
+                    </div>
+                  </div>
+
+                  <!-- Buy Now -->
+                  <div class="car__buy flex">
+                    <img
+                      src="./assets/images/content-images/money.svg"
+                      alt="money-image"
+                    />
+                    <div class="buy-now">
+                      <span>Sold For</span>
+                      <p class="car__buy_now-amount">23,911<span>SAR</span></p>
+                    </div>
+                  </div>
+
+                  <!-- buy&sold end  -->
+                </div>
+
+                <!-- ----- View More Button --------- -->
+                <div class="card__button flex">
+                  <p>View 3 Bids</p>
+                  <img
+                    src="./assets/images/content-images/chevron-down-solid.svg"
+                    alt=""
+                  />
+                  <img
+                    src="./assets/images/content-images/chevron-down-solid-green.svg"
+                    class="chevron-img-green unactive"
+                    alt=""
+                  />
+                </div>
+
+                <!-- View More Bid Div -->
+                <div class="card__expand unactive">
+                  <div class="card__view__more">
+                    <div class="card__view__more-date flex">
+                      <img
+                        src="./assets/images/content-images/calendar.svg"
+                        alt="calendar-image"
+                      />
+                      <p>10 Dec 2019 - 20:05</p>
+                    </div>
+                    <div
+                      class="card__view__more-name-amount flex space-between"
+                    >
+                      <p>1. &nbsp;&nbsp; JOVANA MILIC</p>
+                      <p class="view_more-p">10,500<span>SAR</span></p>
+                    </div>
+                  </div>
+
+                  <div class="exapnad_area-line"></div>
+
+                  <div class="card__view__more">
+                    <div class="card__view__more-date flex">
+                      <img
+                        src="./assets/images/content-images/calendar.svg"
+                        alt="calendar-image"
+                      />
+                      <p>10 Dec 2019 - 20:05</p>
+                    </div>
+                    <div
+                      class="card__view__more-name-amount flex space-between"
+                    >
+                      <p>1. &nbsp;&nbsp; JOVANA MILIC</p>
+                      <p class="view_more-p">10,500<span>SAR</span></p>
+                    </div>
+                  </div>
+
+                  <div class="exapnad_area-line"></div>
+
+                  <div class="card__view__more">
+                    <div class="card__view__more-date flex">
+                      <img
+                        src="./assets/images/content-images/calendar.svg"
+                        alt="calendar-image"
+                      />
+                      <p>10 Dec 2019 - 20:05</p>
+                    </div>
+                    <div
+                      class="card__view__more-name-amount flex space-between"
+                    >
+                      <p>1. &nbsp;&nbsp; JOVANA MILIC</p>
+                      <p class="view_more-p">10,500<span>SAR</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="cards__column card__media">
+              <!-- card 1 -->
+              <div class="cards__card">
+                <!-- ---------- Card Date ---------- -->
+                <p class="cards__date">Thursday 12 Dec 2019 - 15:10</p>
+
+                <!-- ------Car Image -----------  -->
+                <div class="car-image">
+                  <!-- ------- Inside Car Image -------- -->
+                  <div class="car__star_image" onclick="toggleStar()">
+                    <img
+                      src="./assets/images/content-images/star.png"
+                      alt="unfill-star"
+                      class="star-img"
+                    />
+                  </div>
+
+                  <div class="car__law__image">
+                    <img
+                      src="./assets/images/content-images/law.svg"
+                      alt="law-symbol"
+                    />
+                  </div>
+                </div>
+
+                <!-- ------ Model Name & Year --------- -->
+                <div class="car__model flex space-between">
+                  <p>Toyota Camry SE</p>
+                  <p>2019</p>
+                </div>
+
+                <!-- ------- Accident & Views -------- -->
+                <div class="car__accident flex space-between">
+                  <div class="car__accident-img flex">
+                    <img
+                      src="./assets/images/content-images/overturned-vehicle.svg"
+                      alt="overturned-vehicle"
+                    />
+                    <p>Accident</p>
+                  </div>
+                  <div class="car__accident-views flex">
+                    <img
+                      src="./assets/images/content-images/visible.svg"
+                      alt="eye-image"
+                    />
+                    <p>7732 Views</p>
+                  </div>
+                </div>
+
+                <!-- --------- Location --------- -->
+                <div class="card__location flex">
+                  <img
+                    src="./assets/images/content-images/location.svg"
+                    alt="location image"
+                  />
+
+                  <div class="location__name">
+                    <span>Location</span>
+                    <p>Riyadh Yard, Saudi Arabia</p>
+                  </div>
+
+                  <!-- Location end -->
+                </div>
+
+                <!-- --- buy&sold ------- -->
+                <div class="card__buy-sold flex">
+                  <!-- Sold For -->
+                  <div class="card__sold flex">
+                    <img
+                      src="./assets/images/content-images/law.svg"
+                      alt="law-symbol"
+                    />
+                    <div class="sold-for">
+                      <span>Sold For</span>
+                      <p class="card__sold-amount">23,911<span>SAR</span></p>
+                    </div>
+                  </div>
+
+                  <!-- Buy Now -->
+                  <div class="car__buy flex">
+                    <img
+                      src="./assets/images/content-images/money.svg"
+                      alt="money-image"
+                    />
+                    <div class="buy-now">
+                      <span>Sold For</span>
+                      <p class="car__buy_now-amount">23,911<span>SAR</span></p>
+                    </div>
+                  </div>
+
+                  <!-- buy&sold end  -->
+                </div>
+
+                <!-- ----- View More Button --------- -->
+                <div class="card__button flex">
+                  <p>View 3 Bids</p>
+                  <img
+                    src="./assets/images/content-images/chevron-down-solid.svg"
+                    alt=""
+                  />
+                  <img
+                    src="./assets/images/content-images/chevron-down-solid-green.svg"
+                    class="chevron-img-green unactive"
+                    alt=""
+                  />
+                </div>
+
+                <!-- View More Bid Div -->
+                <div class="card__expand unactive">
+                  <div class="card__view__more">
+                    <div class="card__view__more-date flex">
+                      <img
+                        src="./assets/images/content-images/calendar.svg"
+                        alt="calendar-image"
+                      />
+                      <p>10 Dec 2019 - 20:05</p>
+                    </div>
+                    <div
+                      class="card__view__more-name-amount flex space-between"
+                    >
+                      <p>1. &nbsp;&nbsp; JOVANA MILIC</p>
+                      <p class="view_more-p">10,500<span>SAR</span></p>
+                    </div>
+                  </div>
+
+                  <div class="exapnad_area-line"></div>
+
+                  <div class="card__view__more">
+                    <div class="card__view__more-date flex">
+                      <img
+                        src="./assets/images/content-images/calendar.svg"
+                        alt="calendar-image"
+                      />
+                      <p>10 Dec 2019 - 20:05</p>
+                    </div>
+                    <div
+                      class="card__view__more-name-amount flex space-between"
+                    >
+                      <p>1. &nbsp;&nbsp; JOVANA MILIC</p>
+                      <p class="view_more-p">10,500<span>SAR</span></p>
+                    </div>
+                  </div>
+
+                  <div class="exapnad_area-line"></div>
+
+                  <div class="card__view__more">
+                    <div class="card__view__more-date flex">
+                      <img
+                        src="./assets/images/content-images/calendar.svg"
+                        alt="calendar-image"
+                      />
+                      <p>10 Dec 2019 - 20:05</p>
+                    </div>
+                    <div
+                      class="card__view__more-name-amount flex space-between"
+                    >
+                      <p>1. &nbsp;&nbsp; JOVANA MILIC</p>
+                      <p class="view_more-p">10,500<span>SAR</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="cards__card mt-20">
+                <!-- ---------- Card Date ---------- -->
+                <p class="cards__date">Thursday 12 Dec 2019 - 15:10</p>
+
+                <!-- ------Car Image -----------  -->
+                <div class="car-image">
+                  <!-- ------- Inside Car Image -------- -->
+                  <div class="car__star_image" onclick="toggleStar()">
+                    <img
+                      src="./assets/images/content-images/star.png"
+                      alt="unfill-star"
+                      class="star-img"
+                    />
+                  </div>
+
+                  <div class="car__law__image">
+                    <img
+                      src="./assets/images/content-images/law.svg"
+                      alt="law-symbol"
+                    />
+                  </div>
+                </div>
+
+                <!-- ------ Model Name & Year --------- -->
+                <div class="car__model flex space-between">
+                  <p>Toyota Camry SE</p>
+                  <p>2019</p>
+                </div>
+
+                <!-- ------- Accident & Views -------- -->
+                <div class="car__accident flex space-between">
+                  <div class="car__accident-img flex">
+                    <img
+                      src="./assets/images/content-images/overturned-vehicle.svg"
+                      alt="overturned-vehicle"
+                    />
+                    <p>Accident</p>
+                  </div>
+                  <div class="car__accident-views flex">
+                    <img
+                      src="./assets/images/content-images/visible.svg"
+                      alt="eye-image"
+                    />
+                    <p>7732 Views</p>
+                  </div>
+                </div>
+
+                <!-- --------- Location --------- -->
+                <div class="card__location flex">
+                  <img
+                    src="./assets/images/content-images/location.svg"
+                    alt="location image"
+                  />
+
+                  <div class="location__name">
+                    <span>Location</span>
+                    <p>Riyadh Yard, Saudi Arabia</p>
+                  </div>
+
+                  <!-- Location end -->
+                </div>
+
+                <!-- --- buy&sold ------- -->
+                <div class="card__buy-sold flex">
+                  <!-- Sold For -->
+                  <div class="card__sold flex">
+                    <img
+                      src="./assets/images/content-images/law.svg"
+                      alt="law-symbol"
+                    />
+                    <div class="sold-for">
+                      <span>Sold For</span>
+                      <p class="card__sold-amount">23,911<span>SAR</span></p>
+                    </div>
+                  </div>
+
+                  <!-- Buy Now -->
+                  <div class="car__buy flex">
+                    <img
+                      src="./assets/images/content-images/money.svg"
+                      alt="money-image"
+                    />
+                    <div class="buy-now">
+                      <span>Sold For</span>
+                      <p class="car__buy_now-amount">23,911<span>SAR</span></p>
+                    </div>
+                  </div>
+
+                  <!-- buy&sold end  -->
+                </div>
+
+                <!-- ----- View More Button --------- -->
+                <div class="card__button flex">
+                  <p>View 3 Bids</p>
+                  <img
+                    src="./assets/images/content-images/chevron-down-solid.svg"
+                    alt=""
+                  />
+                  <img
+                    src="./assets/images/content-images/chevron-down-solid-green.svg"
+                    class="chevron-img-green unactive"
+                    alt=""
+                  />
+                </div>
+
+                <!-- View More Bid Div -->
+                <div class="card__expand unactive">
+                  <div class="card__view__more">
+                    <div class="card__view__more-date flex">
+                      <img
+                        src="./assets/images/content-images/calendar.svg"
+                        alt="calendar-image"
+                      />
+                      <p>10 Dec 2019 - 20:05</p>
+                    </div>
+                    <div
+                      class="card__view__more-name-amount flex space-between"
+                    >
+                      <p>1. &nbsp;&nbsp; JOVANA MILIC</p>
+                      <p class="view_more-p">10,500<span>SAR</span></p>
+                    </div>
+                  </div>
+
+                  <div class="exapnad_area-line"></div>
+
+                  <div class="card__view__more">
+                    <div class="card__view__more-date flex">
+                      <img
+                        src="./assets/images/content-images/calendar.svg"
+                        alt="calendar-image"
+                      />
+                      <p>10 Dec 2019 - 20:05</p>
+                    </div>
+                    <div
+                      class="card__view__more-name-amount flex space-between"
+                    >
+                      <p>1. &nbsp;&nbsp; JOVANA MILIC</p>
+                      <p class="view_more-p">10,500<span>SAR</span></p>
+                    </div>
+                  </div>
+
+                  <div class="exapnad_area-line"></div>
+
+                  <div class="card__view__more">
+                    <div class="card__view__more-date flex">
+                      <img
+                        src="./assets/images/content-images/calendar.svg"
+                        alt="calendar-image"
+                      />
+                      <p>10 Dec 2019 - 20:05</p>
+                    </div>
+                    <div
+                      class="card__view__more-name-amount flex space-between"
+                    >
+                      <p>1. &nbsp;&nbsp; JOVANA MILIC</p>
+                      <p class="view_more-p">10,500<span>SAR</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- card 3 -->
+              <div class="cards__card mt-20">
+                <!-- ---------- Card Date ---------- -->
+                <p class="cards__date">Thursday 12 Dec 2019 - 15:10</p>
+
+                <!-- ------Car Image -----------  -->
+                <div class="car-image">
+                  <!-- ------- Inside Car Image -------- -->
+                  <div class="car__star_image" onclick="toggleStar()">
+                    <img
+                      src="./assets/images/content-images/star.png"
+                      alt="unfill-star"
+                      class="star-img"
+                    />
+                  </div>
+
+                  <div class="car__law__image">
+                    <img
+                      src="./assets/images/content-images/law.svg"
+                      alt="law-symbol"
+                    />
+                  </div>
+                </div>
+
+                <!-- ------ Model Name & Year --------- -->
+                <div class="car__model flex space-between">
+                  <p>Toyota Camry SE</p>
+                  <p>2019</p>
+                </div>
+
+                <!-- ------- Accident & Views -------- -->
+                <div class="car__accident flex space-between">
+                  <div class="car__accident-img flex">
+                    <img
+                      src="./assets/images/content-images/overturned-vehicle.svg"
+                      alt="overturned-vehicle"
+                    />
+                    <p>Accident</p>
+                  </div>
+                  <div class="car__accident-views flex">
+                    <img
+                      src="./assets/images/content-images/visible.svg"
+                      alt="eye-image"
+                    />
+                    <p>7732 Views</p>
+                  </div>
+                </div>
+
+                <!-- --------- Location --------- -->
+                <div class="card__location flex">
+                  <img
+                    src="./assets/images/content-images/location.svg"
+                    alt="location image"
+                  />
+
+                  <div class="location__name">
+                    <span>Location</span>
+                    <p>Riyadh Yard, Saudi Arabia</p>
+                  </div>
+
+                  <!-- Location end -->
+                </div>
+
+                <!-- --- buy&sold ------- -->
+                <div class="card__buy-sold flex">
+                  <!-- Sold For -->
+                  <div class="card__sold flex">
+                    <img
+                      src="./assets/images/content-images/law.svg"
+                      alt="law-symbol"
+                    />
+                    <div class="sold-for">
+                      <span>Sold For</span>
+                      <p class="card__sold-amount">23,911<span>SAR</span></p>
+                    </div>
+                  </div>
+
+                  <!-- Buy Now -->
+                  <div class="car__buy flex">
+                    <img
+                      src="./assets/images/content-images/money.svg"
+                      alt="money-image"
+                    />
+                    <div class="buy-now">
+                      <span>Sold For</span>
+                      <p class="car__buy_now-amount">23,911<span>SAR</span></p>
+                    </div>
+                  </div>
+
+                  <!-- buy&sold end  -->
+                </div>
+
+                <!-- ----- View More Button --------- -->
+                <div class="card__button flex">
+                  <p>View 3 Bids</p>
+                  <img
+                    src="./assets/images/content-images/chevron-down-solid.svg"
+                    alt=""
+                  />
+                  <img
+                    src="./assets/images/content-images/chevron-down-solid-green.svg"
+                    class="chevron-img-green unactive"
+                    alt=""
+                  />
+                </div>
+
+                <!-- View More Bid Div -->
+                <div class="card__expand unactive">
+                  <div class="card__view__more">
+                    <div class="card__view__more-date flex">
+                      <img
+                        src="./assets/images/content-images/calendar.svg"
+                        alt="calendar-image"
+                      />
+                      <p>10 Dec 2019 - 20:05</p>
+                    </div>
+                    <div
+                      class="card__view__more-name-amount flex space-between"
+                    >
+                      <p>1. &nbsp;&nbsp; JOVANA MILIC</p>
+                      <p class="view_more-p">10,500<span>SAR</span></p>
+                    </div>
+                  </div>
+
+                  <div class="exapnad_area-line"></div>
+
+                  <div class="card__view__more">
+                    <div class="card__view__more-date flex">
+                      <img
+                        src="./assets/images/content-images/calendar.svg"
+                        alt="calendar-image"
+                      />
+                      <p>10 Dec 2019 - 20:05</p>
+                    </div>
+                    <div
+                      class="card__view__more-name-amount flex space-between"
+                    >
+                      <p>1. &nbsp;&nbsp; JOVANA MILIC</p>
+                      <p class="view_more-p">10,500<span>SAR</span></p>
+                    </div>
+                  </div>
+
+                  <div class="exapnad_area-line"></div>
+
+                  <div class="card__view__more">
+                    <div class="card__view__more-date flex">
+                      <img
+                        src="./assets/images/content-images/calendar.svg"
+                        alt="calendar-image"
+                      />
+                      <p>10 Dec 2019 - 20:05</p>
+                    </div>
+                    <div
+                      class="card__view__more-name-amount flex space-between"
+                    >
+                      <p>1. &nbsp;&nbsp; JOVANA MILIC</p>
+                      <p class="view_more-p">10,500<span>SAR</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Car Cards End  -->
+          </div>
+
+          <!-- <div class="page__numbers flex">
+            <div class="page">1</div>
+            <div class="page">2</div>
+            <div class="page">3</div>
+            <div class="page">4</div>
+            <div class="page">5</div>
+            <div class="page">6</div>
+            <div class="page">7</div>
+            <div class="page">8</div>
+            <div class="page">9</div>
+            <div class="page">10</div>
+            <div class="page">11</div>
+            <div class="page">12</div>
+          </div> -->
+          <!-- Page_Content_Wrapper End -->
+        </div>
+
+        <!-- container ENd -->
+      </div>
+      <!-- Page Section -->
+
+      <!-- Section Main End -->
+    </section>
+
+    <!-- Footer With Grid -->
+    <section>
+      <div class="container">
+        <div class="footer__grid__container">
+          <div class="footer__logo">
+            <img
+              src="./assets/images/footer/footer-desktop-logo.png"
+              alt="Company Logo"
+              class="footer-desktop-logo"
+            />
+            <img
+              src="./assets/images/footer/footer-mobile-logo.svg"
+              alt="Company Logo"
+              class="footer-mobile-logo unactive"
+            />
+            <div class="footer__line"></div>
+          </div>
+
+          <div class="footer__terms">
+            <p class="footer__p-terms">TERMS & CONDITIONS</p>
+            <p class="footer__terms-p2">PRIVACY POLICY</p>
+            <p>FAQS</p>
+
+            <div class="footer__line"></div>
+          </div>
+
+          <div class="ransan unactive">
+            <p class="footer__terms-product unactive"><b>RASAN</b> PRODUCT</p>
+          </div>
+
+          <div class="footer__question">
+            <p>QUESTIONS? <a href="#">SUPPORT@CARMAZAD.COM</a></p>
+            <div class="footer__line"></div>
+          </div>
+
+          <div class="footer__social">
+            <img
+              src="./assets/images/footer/instagram.svg"
+              alt="instagram logo"
+            />
+            <img
+              src="./assets/images/footer/facebook.svg"
+              alt="Facebook Logo"
+            />
+            <img src="./assets/images/footer/twitter.svg" alt="Twitter Logo" />
+
+            <div class="footer_singin unactive">
+              <img
+                src="./assets/images/footer/envelope-solid.svg"
+                alt="Envelope Image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ------- jQuery for Range Slider ------- -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- ---- Plugin JavaScript file => Range Slider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+
+    <!-- Adding Javascript -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>
